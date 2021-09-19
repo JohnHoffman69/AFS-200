@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class="container" style="width: 800px; margin:0 auto;">
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        |
+        <a href="{% url 'register' %}">Register</a>
+        {% endif %}
+        <h1>Spaceship Candidates</h1>
+        <h2>Rules for reporting</h2>
+        <h3>Rule 1</h3>
+        <p>Have Space I.D. with you.</p>
+        <h3>Rule 2</h3>
+        <p>Bring all Space Gear to the ship.</p>
+        <h3>Rule 3</h3>
+        <p>Report to the Space staff for inprocessing.</p>
+        <h3>Rule 4</h3>
+        <p>Leave cell phone off till space commander approves otherwise.</p>
+        
+    </div>
+</body>
+</html>
